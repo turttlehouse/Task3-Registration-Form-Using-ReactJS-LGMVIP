@@ -55,6 +55,22 @@ const RegisterForm = (props) => {
         props.onSubmit(formData);
 
     };
+
+    const clearFormdata =()=>{
+      setFormData({
+        name:'',
+        email:'',
+        website:'',
+        imageLink:'',
+        gender:'',
+        skills:[]
+
+      });
+    }
+
+      
+
+    
    
   
 
@@ -114,7 +130,7 @@ const RegisterForm = (props) => {
 
             <button type='submit' id="enroll-btn">Enroll Student</button>
             
-            <button type="reset" id="clear-btn" >Clear</button>
+            <button type="reset" id="clear-btn" onClick={clearFormdata} >Clear</button>
 
         </form>
 

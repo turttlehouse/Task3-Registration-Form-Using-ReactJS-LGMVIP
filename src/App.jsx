@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
+import './App.css'
 import Header from './Components/Header/Header';
 import RegisterForm from './Components/RegisterForm/RegisterForm';
+import DisplayStudentList from './Components/DisplayStudentList/DisplayStudentList';
 
 
 const App = () => {
@@ -26,6 +28,10 @@ const App = () => {
 
         <div className='form-container'>
         <RegisterForm onSubmit={handleFormSubmit} />
+        </div>
+
+        <div className='form-display'>
+          <DisplayStudentList/>
         </div>
 
       </div>

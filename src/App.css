@@ -1,0 +1,24 @@
+/* styling the container where two components are placed */
+.content{
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    max-width: 1200px;  /*setting a maximum width for the content */
+    margin-top: 20px;
+}
+
+/* styling the container where form is placed */
+.form-container{
+    flex:1;   /*takes up the available space*/
+    margin-right: 10px;
+
+}
+
+/* styling the container where table is placed */
+.display-container{
+    flex:1;
+}
+
+body{
+    margin: 0;
+}
