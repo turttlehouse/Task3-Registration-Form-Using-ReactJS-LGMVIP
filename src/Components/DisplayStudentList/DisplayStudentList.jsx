@@ -1,13 +1,11 @@
 import React from 'react'
 import './DisplayStudentList.css'
 
-const DisplayStudentList = () => {
+// props is an object that contains all the props passed to the component. Here, we are accessing the enrolledStudents prop, which is an array of student data.
 
-
-
-
-
-
+const DisplayStudentList = (props) => {
+//x contains the data of students
+// x represents the current element being processed, and index represents its index in the array.
   return (
     <>
       <h1>Enrolled Students</h1>
@@ -23,20 +21,27 @@ const DisplayStudentList = () => {
         </thead>
 
         <tbody>
-          <tr>
-            <td>
-              <strong>Name:</strong>  <br/>
-              <strong>Email:</strong>  <br/>
-              <strong>Website:</strong>  <br/>
-              <strong>Gender:</strong>  <br/>
-              <strong>Skills:</strong>  <br/>
-            </td>
+          {props.enrolledStudents.map((x,index)=>(
 
-            <td>
-              <img src="" alt='studentname'/>
-            </td>
+                <tr key={index}>
+                <td>
+                  <strong>Name:</strong>  { x.name }  <br/>
+                  <strong>Email:</strong>  { x.email }<br/>
+                  <strong>Website:</strong> { x.website }  <br/>
+                  <strong>Gender:</strong> { x.gender }  <br/>
+                  <strong>Skills:</strong> { x.skills.join(',') } <br/>
+                </td>
 
-          </tr>
+                <td>
+                  <img src={x.imageLink} alt={x.name} style={{width:'200px',height:'100px'}}/>
+                </td>
+
+                </tr>
+          )
+
+
+          )}
+     
         
         </tbody>
 

@@ -7,19 +7,14 @@ import DisplayStudentList from './Components/DisplayStudentList/DisplayStudentLi
 
 const App = () => {
   const [formData, setFormData] = useState({});
+
+  const[enrolledStudents,setEnrolledStudents] = useState([]);
   
   const handleFormSubmit = (alldata) => {
     setFormData(alldata);
+
+    setEnrolledStudents([...enrolledStudents,alldata]);
   }
-
-
-
-
-
-
-
-
-
 
   return (
     <div className='App'>
@@ -31,7 +26,7 @@ const App = () => {
         </div>
 
         <div className='form-display'>
-          <DisplayStudentList/>
+          <DisplayStudentList enrolledStudents={enrolledStudents}/>
         </div>
 
       </div>
