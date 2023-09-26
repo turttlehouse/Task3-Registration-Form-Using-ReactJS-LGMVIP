@@ -1,5 +1,5 @@
 import React from 'react'
-import './DisplayStudentList.css'
+import '../../Style/DisplayStudentList.css'
 
 // props is an object that contains all the props passed to the component. Here, we are accessing the enrolledStudents prop, which is an array of student data.
 

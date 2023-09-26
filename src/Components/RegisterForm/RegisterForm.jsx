@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './RegisterForm.css'
+import '../../Style/RegisterForm.css'
 
 
 const RegisterForm = (props) => {
